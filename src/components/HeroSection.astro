@@ -1,0 +1,22 @@
+---
+import AboutSection from "./AboutSection.astro";
+import ExperienceSection from "./ExperienceSection.astro";
+import ProjectSection from "./ProjectSection.astro";
+import PerfilSection from "./PerfilSection.astro";
+---
+
+
+<section class="min-h-screen flex flex-col md:flex-row items-start justify-start px-6 md:px-12 pt-24 max-w-7xl mx-auto">
+    <PerfilSection/>
+
+    <!-- Lado derecho: Contenido (Acerca de mí + Experiencia) -->
+    <div class="w-full md:w-2/3 md:pl-32 lg:pl-48 space-y-24">
+
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectSection />
+    </div>
+    <!-- Botón flotante para volver al inicio -->
+
+
+</section>

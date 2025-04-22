@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import Footer from "../components/FooterSection.astro";
+---
+
+<!--<html lang="es" class="bg-gray-950 text-white scroll-smooth" >-->
+<html lang="es" class="bg-gray-950 text-white scroll-smooth" >
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Edwin - Backend Developer especializado en Java y microservicios." />
+    <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
+    <link rel="icon" href="/images/favicon.svg" type="image/favicon.svg" />
+    <title>Edwin | Backend Developer</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            integrity="sha512-...tu_hash..."
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+</head>
+
+
+
+<body class="font-mono bg-gray-950 text-white">
+<!--&lt;!&ndash;<Header />&ndash;&gt;-->
+<!--<header class="sticky top-0 z-50 w-full bg-gray-950/90 backdrop-blur border-b border-gray-800">-->
+<!--    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-end">-->
+<!--        <div class="flex items-center space-x-4 text-sm font-mono text-gray-400">-->
+<!--            <a href="/" class="flex items-center gap-1 hover:text-blue-400 transition" title="Español">-->
+<!--                <i class="fa-solid "></i>-->
+<!--                <span class="hidden sm:inline">ES</span>-->
+<!--            </a>-->
+<!--            <span class="text-gray-500">/</span>-->
+<!--            <a href="/en/" class="flex items-center gap-1 hover:text-blue-400 transition" title="English">-->
+<!--                <i class="fa-solid fa-globe"></i>-->
+<!--                <span class="hidden sm:inline">EN</span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</header>-->
+
+
+<slot />
+<!--<main class="min-h-screen pt-20 px-6 max-w-5xl mx-auto">-->
+<!--  -->
+<!--</main>-->
+
+
+<Footer />
+
+
+
+</body>
+</html>
