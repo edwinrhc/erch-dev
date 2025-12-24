@@ -14,3 +14,53 @@ body {
     /*font-family: 'Fira Code', monospace;*/
     font-family: 'Inter', sans-serif;
 }
+
+
+/* ===============================
+   Card hover reutilizable
+   =============================== */
+.card-hover {
+    @apply p-1 rounded-xl transition-all duration-300
+    hover:bg-slate-800/30
+    hover:border
+    hover:border-slate-700
+    hover:shadow-xl
+    hover:scale-[1.01];
+}
+
+/* ===============================
+   Stack cards
+   =============================== */
+.stack-card-inner {
+    @apply p-4;
+}
+
+.stack-header {
+    @apply flex items-center gap-3 mb-3;
+}
+
+.stack-icon {
+    @apply text-blue-400 text-sm;
+}
+
+.stack-title {
+    @apply text-sm font-semibold uppercase
+    tracking-wider text-slate-300;
+}
+
+.stack-tags {
+    @apply flex flex-wrap gap-2;
+}
+
+.stack-pill {
+    @apply px-2 py-0.5 text-xs
+    rounded-md
+    bg-slate-700/40
+    text-slate-300
+    font-mono;
+}
+
+/* Detalle fino */
+.card-hover:hover .stack-title {
+    @apply text-blue-400;
+}
