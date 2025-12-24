@@ -4,13 +4,14 @@ import ExperienceSection from "./ExperienceSection.astro";
 import ProjectSection from "./ProjectSection.astro";
 import PerfilSection from "./PerfilSection.astro";
 import ContactSection from "./ContactSection.astro";
+import StackTecnicoSection from "./StackTecnicoSection.astro";
 ---
 
 
-<section class="min-h-screen flex flex-col md:flex-row items-start justify-start px-6 md:px-12 pt-24 max-w-7xl mx-auto">
+<!--<section class="min-h-screen flex flex-col md:flex-row items-start justify-start px-6 md:px-12 pt-24 max-w-7xl mx-auto">
     <PerfilSection/>
 
-    <!-- Lado derecho: Contenido (Acerca de mí + Experiencia) -->
+    &lt;!&ndash; Lado derecho: Contenido (Acerca de mí + Experiencia) &ndash;&gt;
     <div class="w-full md:w-2/3 md:pl-32 lg:pl-48 space-y-24">
 
         <AboutSection />
@@ -18,7 +19,33 @@ import ContactSection from "./ContactSection.astro";
         <ProjectSection />
         <ContactSection />
     </div>
-    <!-- Botón flotante para volver al inicio -->
+    &lt;!&ndash; Botón flotante para volver al inicio &ndash;&gt;
 
+
+</section>-->
+
+<section
+        class="max-w-7xl mx-auto
+         px-6 md:px-12 pt-24
+         flex flex-col md:flex-row gap-20"
+>
+
+    <!-- SIDEBAR -->
+    <div class="hidden md:block md:w-[26rem] lg:w-[28rem]">
+        <aside class="sticky top-24 self-start">
+            <PerfilSection />
+        </aside>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main class="flex-1 space-y-24">
+        <AboutSection />
+        <StackTecnicoSection />
+        <ExperienceSection />
+        <ProjectSection />
+        <ContactSection />
+    </main>
 
 </section>
+
+
