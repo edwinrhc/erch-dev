@@ -9,15 +9,15 @@ export function runRoleTyping() {
         cursorChar: "|",
         lifeLike: true,
     })
-        .type("Backend Developer")
+        .type("Backend Developer · Java & Spring Boot")
         .pause(1200)
         .delete()
         .pause(600)
-        .type("Java & Spring Boot")
+        .type("Microservicios · APIs REST")
         .pause(1200)
         .delete()
         .pause(600)
-        .type("Microservices Enthusiast")
+        .type("Oracle · Docker · JWT")
         .pause(1200)
         .delete()
         .pause(1500)
