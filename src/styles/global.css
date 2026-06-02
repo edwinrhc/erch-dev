@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* global.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -13,6 +13,142 @@ body {
     color: #f5f5f5;
     /*font-family: 'Fira Code', monospace;*/
     font-family: 'Inter', sans-serif;
+}
+
+.control-button {
+    @apply inline-flex h-10 min-w-10 items-center justify-center rounded-lg
+    border border-slate-700 bg-slate-900/85 px-3 text-slate-200
+    shadow-lg shadow-black/20 backdrop-blur
+    transition hover:border-blue-400 hover:text-blue-300;
+}
+
+html.theme-light body {
+    background: #f3f7fb;
+    color: #172033;
+}
+
+html.theme-light .bg-gradient-to-b {
+    background-image:
+        radial-gradient(circle at top left, rgb(219 234 254 / 0.65), transparent 34rem),
+        linear-gradient(to bottom, #f7fbff, #eef4f8 42%, #f8fafc);
+}
+
+html.theme-light .text-white {
+    color: #172033;
+}
+
+html.theme-light .text-gray-100,
+html.theme-light .text-gray-300,
+html.theme-light .text-slate-200,
+html.theme-light .text-slate-300 {
+    color: #314156;
+}
+
+html.theme-light .text-gray-400,
+html.theme-light .text-slate-400,
+html.theme-light .text-gray-500,
+html.theme-light .text-slate-500 {
+    color: #66768f;
+}
+
+html.theme-light .text-blue-300,
+html.theme-light .text-blue-400 {
+    color: #1d4ed8;
+}
+
+html.theme-light .bg-slate-900,
+html.theme-light .bg-slate-900\/85,
+html.theme-light .bg-slate-800\/30,
+html.theme-light .bg-slate-800\/40,
+html.theme-light .bg-slate-700\/40 {
+    background-color: rgb(255 255 255 / 0.78);
+}
+
+html.theme-light .border-slate-700,
+html.theme-light .border-gray-800 {
+    border-color: #d6e0ea;
+}
+
+html.theme-light .bg-gray-600 {
+    background-color: #9aabba;
+}
+
+html.theme-light .shadow-black\/20 {
+    --tw-shadow-color: rgb(15 23 42 / 0.12);
+    --tw-shadow: var(--tw-shadow-colored);
+}
+
+html.theme-light .stack-pill {
+    background-color: #e7edf4;
+    color: #314156;
+    border: 1px solid #d8e2ec;
+}
+
+html.theme-light input,
+html.theme-light textarea {
+    background-color: rgb(255 255 255 / 0.92);
+    color: #172033;
+}
+
+html.theme-light .control-button {
+    background-color: rgb(255 255 255 / 0.82);
+    border-color: #cbd8e6;
+    color: #1e3a5f;
+    box-shadow: 0 12px 28px rgb(30 58 95 / 0.12);
+}
+
+html.theme-light .control-button:hover {
+    border-color: #2563eb;
+    color: #1d4ed8;
+}
+
+html.theme-light .bg-blue-900\/30 {
+    background-color: #dbeafe;
+}
+
+html.theme-light .text-blue-300 {
+    color: #1d4ed8;
+}
+
+html.theme-light .bg-amber-900\/30 {
+    background-color: #fef3c7;
+}
+
+html.theme-light .text-amber-300 {
+    color: #92400e;
+}
+
+html.theme-light .bg-yellow-900\/30 {
+    background-color: #fef9c3;
+}
+
+html.theme-light .text-yellow-300 {
+    color: #854d0e;
+}
+
+html.theme-light .bg-green-900\/30,
+html.theme-light .bg-emerald-900\/30 {
+    background-color: #dcfce7;
+}
+
+html.theme-light .text-green-300,
+html.theme-light .text-emerald-300 {
+    color: #166534;
+}
+
+html.theme-light .bg-indigo-900\/30,
+html.theme-light .bg-purple-900\/30 {
+    background-color: #ede9fe;
+}
+
+html.theme-light .text-indigo-300,
+html.theme-light .text-purple-300 {
+    color: #5b21b6;
+}
+
+html.theme-light .card-hover:hover,
+html.theme-light .group:hover .group-hover\:bg-slate-800\/30 {
+    background-color: rgb(255 255 255 / 0.86);
 }
 
 

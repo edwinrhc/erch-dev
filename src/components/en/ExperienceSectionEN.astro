@@ -1,74 +1,39 @@
-<section id="experienceEn" class="scroll-mt-24 text-gray-300">
-    <!-- Experience Item -->
-    <div class="grid grid-cols-[120px_1fr] gap-8 items-start">
-        <!-- Date -->
-        <p class="text-sm uppercase tracking-widest text-slate-400 mt-1">
-            2020 — PRESENT
-        </p>
+---
+import { experiencesEn } from "../../data/portfolio-en";
+---
 
-        <!-- Clickable content -->
-        <a
-                href="https://www.gob.pe/fonavi-st"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="no-underline text-inherit"
-        >
-            <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:border-blue-500 group">
-                <h3 class="text-lg font-bold text-white">
-                    Application Developer · Secretaría Técnica de Apoyo a la Comisión AD HOC – PCM
-                </h3>
-                <p class="text-sm text-slate-400 mt-1">Government of Peru</p>
+<section id="experience" class="scroll-mt-24 px-6 md:px-12 max-w-5xl mx-auto text-slate-300 space-y-12">
+    <h2 class="text-3xl font-bold text-blue-400 tracking-wide">Experience</h2>
 
-                <p class="mt-4 leading-relaxed text-slate-300">
-                    Development of internal tools using Java, Spring Boot and Oracle.
-                    Responsible for maintenance, authentication flows, technical support and deployments in Red Hat JBoss servers.
-                    Active participation in technical processes and documentation.
-                </p>
+    {experiencesEn.map((experience) => (
+        <a href={experience.url} target="_blank" rel="noopener noreferrer" class="group block transition-all duration-300">
+            <div class="p-1 rounded-xl transition-all duration-300 group-hover:bg-slate-800/30 group-hover:border group-hover:border-slate-700 group-hover:shadow-xl group-hover:scale-[1.01]">
+                <div class="p-4">
+                    <p class="text-sm uppercase tracking-widest text-slate-400 font-mono mb-2">
+                        {experience.period}
+                    </p>
 
-                <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Java</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Spring Boot</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Spring Framework</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Oracle</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">JBoss</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Visual Basic</span>
+                    <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-blue-400 transition">
+                        {experience.role} · {experience.company}
+                    </h3>
+
+                    <p class="text-sm text-slate-400 mt-1">
+                        {experience.organization}
+                    </p>
+
+                    {experience.description.map((paragraph) => (
+                        <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                            {paragraph}
+                        </p>
+                    ))}
+
+                    <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono opacity-80">
+                        {experience.tags.map((tag) => (
+                            <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">{tag}</span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </a>
-    </div>
-
-    <!-- Experience: Socius Perú SAC -->
-    <div class="grid grid-cols-[120px_1fr] gap-8 items-start mt-16">
-        <!-- Date -->
-        <p class="text-sm uppercase tracking-widest text-slate-400 mt-1">
-            March – May 2024
-        </p>
-
-        <!-- Clickable content -->
-        <a
-                href="https://sociuscorp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="no-underline text-inherit"
-        >
-            <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl hover:border-blue-500 group">
-                <h3 class="text-lg font-bold text-white">
-                    Developer · Socius Perú SAC
-                </h3>
-                <p class="text-sm text-slate-400 mt-1">Consulting in low-code solution development</p>
-
-                <p class="mt-4 leading-relaxed text-slate-300">
-                    Designed and integrated RESTful endpoints using C# to connect backend systems with low-code platforms.
-                    Implemented web scraping automation with Python, leveraging BeautifulSoup and Scrapy to extract key business data.
-                </p>
-
-                <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono">
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">C#</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Python</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">BeautifulSoup</span>
-                    <span class="bg-blue-900/40 text-blue-300 px-2 py-1 rounded">Scrapy</span>
-                </div>
-            </div>
-        </a>
-    </div>
+    ))}
 </section>

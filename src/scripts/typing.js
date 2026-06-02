@@ -21,7 +21,5 @@ export function runRoleTyping() {
         .pause(1200)
         .delete()
         .pause(1500)
-        .delete()
         .go();
 }
-

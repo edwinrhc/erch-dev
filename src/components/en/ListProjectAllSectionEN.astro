@@ -1,16 +1,17 @@
 ---
-import { colorClasses, projects } from "../data/portfolio";
+import { colorClasses } from "../../data/portfolio";
+import { projectsEn } from "../../data/portfolio-en";
 ---
 
 <section class="pt-32 px-6 md:px-12 max-w-5xl mx-auto text-slate-300">
-    <h1 class="text-3xl md:text-4xl font-bold text-white mb-8">Todos mis proyectos</h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-white mb-8">All my projects</h1>
     <p class="text-slate-400 max-w-2xl mb-12">
-        Una colección de proyectos personales y profesionales, incluyendo sistemas backend,
-        aplicaciones web, integraciones de servicios, migraciones legacy y soluciones con microservicios.
+        A collection of personal and professional projects, including backend systems,
+        web applications, service integrations, legacy migrations and microservices solutions.
     </p>
 
     <ul class="space-y-8">
-        {projects.map((project) => {
+        {projectsEn.map((project) => {
             const colors = colorClasses[project.color as keyof typeof colorClasses];
 
             return (
@@ -29,7 +30,7 @@ import { colorClasses, projects } from "../data/portfolio";
                         ))}
                     </div>
                     <a href={project.url} target="_blank" rel="noopener noreferrer" class="text-sm text-blue-400 hover:underline mt-3 inline-block">
-                        <i class="fa-brands fa-github"></i> Ver en GitHub
+                        <i class="fa-brands fa-github"></i> View on GitHub
                     </a>
                 </li>
             );
@@ -37,12 +38,12 @@ import { colorClasses, projects } from "../data/portfolio";
     </ul>
 
     <div class="mt-20 text-center">
-        <a href="/" class="inline-block font-mono text-sm px-6 py-3 border border-blue-500 text-blue-400 rounded hover:bg-blue-500/10 transition">
-            <span class="text-green-400">edwin@dev</span>:<span class="text-blue-400">~</span>$ Ir al inicio
+        <a href="/en/" class="inline-block font-mono text-sm px-6 py-3 border border-blue-500 text-blue-400 rounded hover:bg-blue-500/10 transition">
+            <span class="text-green-400">edwin@dev</span>:<span class="text-blue-400">~</span>$ Back home
         </a>
     </div>
 </section>
 
-<a href="#" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition" title="Volver arriba">
+<a href="#" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition" title="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
 </a>

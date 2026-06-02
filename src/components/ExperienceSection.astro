@@ -1,153 +1,56 @@
-<!--<hr class="border-slate-800 my-24">-->
+---
+import { experiences } from "../data/portfolio";
+---
 
 <section
         id="experiencia"
-        class="scroll-mt-24 px-6 md:px-12 max-w-5xl mx-auto text-slate-300 space-y-12 text-justify"
+        class="scroll-mt-24 px-6 md:px-12 max-w-5xl mx-auto text-slate-300 space-y-12"
 >
     <h2 class="text-3xl font-bold text-blue-400 tracking-wide">
         Experiencia
     </h2>
 
-    <!-- ===================== -->
-    <!-- Experiencia: PCM -->
-    <!-- ===================== -->
-    <a
-            href="https://www.gob.pe/fonavi-st"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group block transition-all duration-300"
-    >
-        <div
-                class="p-1 rounded-xl transition-all duration-300
-             group-hover:bg-slate-800/30
-             group-hover:border
-             group-hover:border-slate-700
-             group-hover:shadow-xl
-             group-hover:scale-[1.01]"
+    {experiences.map((experience) => (
+        <a
+                href={experience.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block transition-all duration-300"
         >
-            <div class="p-4">
+            <div
+                    class="p-1 rounded-xl transition-all duration-300
+                 group-hover:bg-slate-800/30
+                 group-hover:border
+                 group-hover:border-slate-700
+                 group-hover:shadow-xl
+                 group-hover:scale-[1.01]"
+            >
+                <div class="p-4">
+                    <p class="text-sm uppercase tracking-widest text-slate-400 font-mono mb-2">
+                        {experience.period}
+                    </p>
 
-                <p class="text-sm uppercase tracking-widest text-slate-400 font-mono mb-2">
-                    2020 — Presente
-                </p>
+                    <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-blue-400 transition">
+                        {experience.role} · {experience.company}
+                    </h3>
 
-                <h3
-                        class="text-lg md:text-xl font-bold text-white
-                 group-hover:text-blue-400 transition"
-                >
-                    Desarrollador de Aplicaciones · Secretaría Técnica AD HOC – PCM
-                </h3>
+                    <p class="text-sm text-slate-400 mt-1">
+                        {experience.organization}
+                    </p>
 
-                <p class="text-sm text-slate-400 mt-1">
-                    Presidencia del Consejo de Ministros · Gobierno del Perú
-                </p>
+                    {experience.description.map((paragraph) => (
+                        <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                            {paragraph}
+                        </p>
+                    ))}
 
-                <p class="text-sm text-slate-300 mt-4 leading-relaxed">
-                    Desarrollo y mantenimiento de sistemas internos de uso institucional,
-                    orientados a la gestión de información y procesos administrativos.
-                    Implementación de funcionalidades backend utilizando
-                    <strong class="text-slate-200">Java y Spring Boot</strong>,
-                    incluyendo autenticación, validaciones de negocio
-                    y control de accesos.
-                </p>
-
-                <p class="text-sm text-slate-300 mt-3 leading-relaxed">
-                    Participación en la modernización y migración de componentes legacy,
-                    así como en la optimización de procesos críticos,
-                    logrando mejorar la estabilidad y el rendimiento
-                    de aplicaciones en entornos productivos.
-                </p>
-
-                <p class="text-sm text-slate-300 mt-3 leading-relaxed">
-                    Colaboración activa en la documentación técnica,
-                    soporte a usuarios internos
-                    y mantenimiento de aplicaciones desplegadas en servidores
-                    <strong class="text-slate-200">JBoss</strong>
-                    con bases de datos
-                    <strong class="text-slate-200">Oracle</strong>.
-                </p>
-
-                <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono opacity-80">
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">Java</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">Spring Boot</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">Oracle</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">JBoss</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">Visual Basic</span>
+                    <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono opacity-80">
+                        {experience.tags.map((tag) => (
+                            <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">{tag}</span>
+                        ))}
+                    </div>
                 </div>
-
             </div>
-        </div>
-    </a>
-
-    <!-- ===================== -->
-    <!-- Experiencia: Socius -->
-    <!-- ===================== -->
-    <a
-            href="https://sociuscorp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group block transition-all duration-300"
-    >
-        <div
-                class="p-1 rounded-xl transition-all duration-300
-             group-hover:bg-slate-800/30
-             group-hover:border
-             group-hover:border-slate-700
-             group-hover:shadow-xl
-             group-hover:scale-[1.01]"
-        >
-            <div class="p-4">
-
-                <p class="text-sm uppercase tracking-widest text-slate-400 font-mono mb-2">
-                    Marzo — Mayo 2024
-                </p>
-
-                <h3
-                        class="text-lg md:text-xl font-bold text-white
-                 group-hover:text-blue-400 transition"
-                >
-                    Desarrollador · Socius Perú SAC
-                </h3>
-
-                <p class="text-sm text-slate-400 mt-1">
-                    Consultoría en soluciones low-code e integración de sistemas
-                </p>
-
-                <p class="text-sm text-slate-300 mt-4 leading-relaxed">
-                    Desarrollo e integración de
-                    <strong class="text-slate-200">APIs REST</strong>
-                    utilizando
-                    <strong class="text-slate-200">C#</strong>,
-                    orientadas a la comunicación entre plataformas low-code
-                    y sistemas externos.
-                </p>
-
-                <p class="text-sm text-slate-300 mt-3 leading-relaxed">
-                    Implementación de procesos de automatización
-                    y scraping de información mediante
-                    <strong class="text-slate-200">Python</strong>,
-                    utilizando librerías como
-                    <strong class="text-slate-200">BeautifulSoup</strong>
-                    y
-                    <strong class="text-slate-200">Scrapy</strong>,
-                    optimizando la recolección y procesamiento de datos.
-                </p>
-
-                <p class="text-sm text-slate-300 mt-3 leading-relaxed">
-                    Trabajo colaborativo con equipos multidisciplinarios,
-                    asegurando la correcta integración,
-                    documentación y entrega de soluciones técnicas.
-                </p>
-
-                <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono opacity-80">
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">C#</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">Python</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">BeautifulSoup</span>
-                    <span class="bg-blue-900/30 text-blue-300 px-2 py-1 rounded">Scrapy</span>
-                </div>
-
-            </div>
-        </div>
-    </a>
-
+        </a>
+    ))}
 </section>
