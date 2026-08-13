@@ -74,7 +74,9 @@ const languageTitle = isEnglish ? "Cambiar a español" : "Switch to English";
 
     <slot />
     <Footer />
-    <script type="module" src="/src/scripts/scroll-title.js"></script>
-    <script type="module" src="/src/scripts/theme-toggle.js"></script>
+    <script>
+        import "../scripts/scroll-title.js";
+        import "../scripts/theme-toggle.js";
+    </script>
 </body>
 </html>
