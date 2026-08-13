@@ -1,5 +1,7 @@
 const themeToggle = document.getElementById("themeToggle");
 const themeIcon = document.getElementById("themeIcon");
+const lightThemeLabel = themeToggle?.dataset.labelLight ?? "Cambiar a tema claro";
+const darkThemeLabel = themeToggle?.dataset.labelDark ?? "Cambiar a tema oscuro";
 
 function setTheme(theme) {
     document.documentElement.classList.toggle("theme-light", theme === "light");
@@ -11,8 +13,10 @@ function setTheme(theme) {
     }
 
     if (themeToggle) {
-        themeToggle.setAttribute("aria-label", theme === "light" ? "Cambiar a tema oscuro" : "Cambiar a tema claro");
-        themeToggle.setAttribute("title", theme === "light" ? "Cambiar a tema oscuro" : "Cambiar a tema claro");
+        const actionLabel = theme === "light" ? darkThemeLabel : lightThemeLabel;
+        themeToggle.setAttribute("aria-label", actionLabel);
+        themeToggle.setAttribute("aria-pressed", String(theme === "light"));
+        themeToggle.setAttribute("title", actionLabel);
     }
 }
 

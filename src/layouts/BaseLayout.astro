@@ -18,6 +18,38 @@ const languageHref = isEnglish
         : "/en/";
 const languageLabel = isEnglish ? "ES" : "EN";
 const languageTitle = isEnglish ? "Cambiar a español" : "Switch to English";
+const lightThemeLabel = isEnglish ? "Switch to light theme" : "Cambiar a tema claro";
+const darkThemeLabel = isEnglish ? "Switch to dark theme" : "Cambiar a tema oscuro";
+const siteUrl = "https://www.erhc-dev.com";
+const canonicalUrl = new URL(currentPath, siteUrl).href;
+const spanishPath = isEnglish ? currentPath.replace(/^\/en/, "") || "/" : currentPath;
+const englishPath = isEnglish
+    ? currentPath
+    : currentPath === "/"
+        ? "/en/"
+        : `/en${currentPath.endsWith("/") ? currentPath : `${currentPath}/`}`;
+const socialImageUrl = `${siteUrl}/images/og-portfolio.png`;
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Edwin Ricardo Huamanttupa Cuevas",
+    url: siteUrl,
+    jobTitle: "Backend Developer",
+    sameAs: [
+        "https://github.com/edwinrhc",
+        "https://linkedin.com/in/edwinrhc",
+    ],
+    knowsAbout: [
+        "Java",
+        "Spring Boot",
+        "Oracle",
+        "REST APIs",
+        "CQRS",
+        "Hexagonal Architecture",
+        "Clean Architecture",
+        "Microservices",
+    ],
+};
 ---
 
 <html lang={lang} class="bg-gray-950 text-white scroll-smooth">
@@ -30,15 +62,25 @@ const languageTitle = isEnglish ? "Cambiar a español" : "Switch to English";
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://www.erhc-dev.com" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={isEnglish ? "en_US" : "es_PE"} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content="Edwin Huamanttupa · Backend Developer" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
 
     <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="es" href={new URL(spanishPath, siteUrl).href} />
+    <link rel="alternate" hreflang="en" href={new URL(englishPath, siteUrl).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(spanishPath, siteUrl).href} />
     <title>{title}</title>
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 
     <script is:inline>
         const storedTheme = localStorage.getItem("theme");
@@ -56,10 +98,13 @@ const languageTitle = isEnglish ? "Cambiar a español" : "Switch to English";
                 id="themeToggle"
                 type="button"
                 class="control-button"
-                aria-label="Cambiar tema"
-                title="Cambiar tema"
+                aria-label={lightThemeLabel}
+                aria-pressed="false"
+                title={lightThemeLabel}
+                data-label-light={lightThemeLabel}
+                data-label-dark={darkThemeLabel}
         >
-            <i id="themeIcon" class="fa-solid fa-moon"></i>
+            <i id="themeIcon" class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
 
         <a

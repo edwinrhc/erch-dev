@@ -12,7 +12,18 @@ export const stackCategories = [
   {
     title: "Arquitectura y diseño",
     icon: "fa-solid fa-layer-group",
-    items: ["APIs REST", "Microservicios", "Arquitectura por capas", "JWT", "Control de roles"],
+    items: [
+      "APIs REST",
+      "Arquitectura por capas",
+      "Clean Architecture",
+      "Arquitectura hexagonal",
+      "CQRS",
+      "SOLID",
+      "Microservicios",
+      "Mensajería asíncrona",
+      "JWT",
+      "Control de roles",
+    ],
   },
   {
     title: "Bases de datos",
@@ -33,30 +44,61 @@ export const stackCategories = [
 
 export const experiences = [
   {
-    period: "2020 - Presente",
+    period: "Enero - Junio 2026",
+    role: "Analista Programador",
+    company: "HITSS Perú S.A.C.",
+    organization: "Desarrollo e integración de soluciones backend empresariales",
+    url: "https://www.hitss.com/",
+    description: [
+      "Desarrollo backend con Java 21 y Spring Boot, aplicando arquitectura hexagonal, Clean Architecture, CQRS y principios SOLID.",
+      "Implementación de APIs REST con reglas de negocio, validaciones, DTOs, mapeos y manejo centralizado de excepciones.",
+      "Integración de servicios, mensajería asíncrona, consultas sobre bases de datos relacionales y gestión de código con Git.",
+    ],
+    tags: [
+      "Java 21",
+      "Spring Boot",
+      "CQRS",
+      "Arquitectura hexagonal",
+      "APIs REST",
+    ],
+  },
+  {
+    period: "Julio 2020 - Diciembre 2025",
     role: "Desarrollador de Aplicaciones",
     company: "Secretaría Técnica AD HOC - PCM",
     organization: "Presidencia del Consejo de Ministros - Gobierno del Perú",
     url: "https://www.gob.pe/fonavi-st",
     description: [
-      "Desarrollo y mantenimiento de sistemas internos de uso institucional, orientados a la gestión de información y procesos administrativos.",
-      "Implementación de funcionalidades backend con Java y Spring Boot, incluyendo autenticación, validaciones de negocio y control de accesos.",
-      "Participación en modernización de componentes legacy, optimización de procesos críticos, documentación técnica y soporte a usuarios internos.",
+      "Desarrollo y mantenimiento de aplicaciones institucionales con Java, Spring Boot y Oracle.",
+      "Implementación de reglas de negocio, autenticación, control de accesos e integración de servicios.",
+      "Modernización de sistemas legacy, control de calidad, documentación técnica y soporte de portales institucionales.",
     ],
-    tags: ["Java", "Spring Boot", "Oracle", "JBoss", "Visual Basic", "Sistemas legacy"],
+    tags: [
+      "Java",
+      "Spring Boot",
+      "Oracle",
+      "JBoss",
+      "Sistemas legacy",
+    ],
   },
   {
     period: "Marzo - Mayo 2024",
     role: "Desarrollador",
-    company: "Socius Perú SAC",
+    company: "Socius Perú S.A.C.",
     organization: "Consultoría en soluciones low-code e integración de sistemas",
     url: "https://sociuscorp.com/",
     description: [
-      "Desarrollo e integración de APIs REST con C# para conectar plataformas low-code con sistemas externos.",
-      "Implementación de procesos de automatización y scraping con Python, BeautifulSoup y Scrapy para optimizar la recolección y procesamiento de datos.",
-      "Trabajo colaborativo con equipos multidisciplinarios, cuidando integración, documentación y entrega de soluciones técnicas.",
+      "Desarrollo e integración de endpoints REST con C# y .NET para conectar plataformas low-code con sistemas externos.",
+      "Implementación de procesos de automatización y scraping con Python, BeautifulSoup y Scrapy.",
+      "Optimización de interfaces en Quantum Visualizer y colaboración con equipos multidisciplinarios.",
     ],
-    tags: ["C#", "Python", "APIs REST", "BeautifulSoup", "Scrapy"],
+    tags: [
+      "C#",
+      ".NET",
+      "Python",
+      "APIs REST",
+      "Scrapy",
+    ],
   },
 ];
 
