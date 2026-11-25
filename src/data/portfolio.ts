@@ -44,6 +44,30 @@ export const stackCategories = [
 
 export const experiences = [
   {
+    period: "Febrero - Agosto 2026",
+    role: "Consultor - Desarrollador Senior Back-End ",
+    company: "OECE",
+    organization: "Organismo Especializado para las Contrataciones Públicas Eficientes",
+    url: "https://www.gob.pe/oece",
+    description: [
+      "Desarrollo y mantenimiento evolutivo de microservicios con Java 21, Spring Boot y Maven para la Nueva Plataforma de Contratación Pública.",
+      "Diseño e implementación de APIs REST en componentes Query y Command, aplicando Clean Architecture, Arquitectura Hexagonal y SOLID",
+      "tPruebas unitarias, documentación Swagger/OpenAPI, revisión de calidad con SonarQube y gestión de código con Git",
+    ],
+    tags: [
+      "Java 21",
+      "Spring Boot",
+      "Microservices",
+      "CQRS",
+      "Clean Architecture",
+      "Hexagonal Architecture",
+      "REST APIs",
+      "SOLID",
+      "Maven",
+      "SonarQube",
+    ],
+  },
+  {
     period: "Enero - Junio 2026",
     role: "Analista Programador",
     company: "HITSS Perú S.A.C.",

@@ -44,6 +44,30 @@ export const stackCategoriesEn = [
 
 export const experiencesEn = [
   {
+    period: "February - August 2026",
+    role: "Senior Backend Developer Consultant",
+    company: "OECE",
+    organization: "Specialized Agency for Efficient Public Procurement",
+    url: "https://www.gob.pe/oece",
+    description: [
+      "Development and enhancement of microservices using Java 21, Spring Boot, and Maven for the New Public Procurement Platform.",
+      "Design and implementation of REST APIs within Query and Command components, applying Clean Architecture, Hexagonal Architecture, and SOLID principles.",
+      "Unit testing, API documentation with Swagger/OpenAPI, code quality analysis with SonarQube, and source code management with Git.",
+    ],
+    tags: [
+      "Java 21",
+      "Spring Boot",
+      "Microservices",
+      "CQRS",
+      "Clean Architecture",
+      "Hexagonal Architecture",
+      "REST APIs",
+      "SOLID",
+      "Maven",
+      "SonarQube",
+    ],
+  },
+    {
     period: "January - June 2026",
     role: "Programmer Analyst",
     company: "HITSS Peru S.A.C.",
